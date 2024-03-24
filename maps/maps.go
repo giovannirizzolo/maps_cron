@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
-	"maps_cron/env"
+	"github.com/giovannirizzolo/maps_cron/env"
 	"net/http"
 	"net/url"
 	"strconv"
