@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
-	"github.com/giovannirizzolo/maps_cron/env"
 	"github.com/giovannirizzolo/maps_cron/file"
 	"github.com/giovannirizzolo/maps_cron/maps"
 	"net/http"
@@ -19,7 +18,6 @@ import (
 var baseUrl = "https://api.mapbox.com"
 
 func main() {
-	env.LoadEnvModule()
 
 	origin := os.Getenv("ORIGIN")
 	destination := os.Getenv("DESTINATION")
@@ -40,7 +38,8 @@ func main() {
 	c := cron.New()
 
 	// c.AddFunc("* */3 6-11 * 3-6 1-5", func() {
-	c.AddFunc("*/2 6-11 * * *", func() {
+	c.AddFunc("*/2 6-10 * 3-6 1-5", func() {
+	// c.AddFunc("* * * * *", func() {
 		fmt.Println("Executing cron job at", time.Now().Format(time.RFC1123))
 
 		record := file.GenerateFileRecord(origin, destination, duration, duration_typical)
