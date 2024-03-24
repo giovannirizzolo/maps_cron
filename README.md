@@ -17,7 +17,7 @@ The schedule is set in ```main.go``` using:
 
 ## Why ❓
 
-I was bored of having to check every morning the 🏠home-to-office🏢 ETA cause of my busy morning routing, so I needed a tool to perform it for me.
+I was bored of having to check every morning the 🏠home-to-office🏢 ETA cause of my busy morning routine, so I needed a tool to perform it for me.
 
 ## How to run
 The recommended option is to run the application using Docker.
