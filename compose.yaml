@@ -9,6 +9,7 @@
 # https://github.com/docker/awesome-compose
 services:
     server:
+        image: maps_cron-server:latest
         healthcheck:
             test: ["CMD", "echo", '"Cron is healthy"']
             interval: 2h
